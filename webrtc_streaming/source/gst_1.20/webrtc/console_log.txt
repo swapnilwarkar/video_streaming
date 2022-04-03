@@ -1,0 +1,138 @@
+swapnil@GS-4877:~/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/webrtc$ ./webrtc_livestreaming --peer-id=5378
+Connecting to server...
+> GET  HTTP/1.1
+> Soup-Debug-Timestamp: 1648981734
+> Soup-Debug: SoupSession 1 (0x560e14ea8100), SoupMessage 1 (0x560e151df0e0), SoupSocket 1 (0x560e14cb2520)
+> Host: webrtc.nirbheek.in:8443
+> Upgrade: websocket
+> Connection: Upgrade
+> Sec-WebSocket-Key: IadHcX94JfDBwg84x90Jwg==
+> Sec-WebSocket-Version: 13
+> Accept-Encoding: gzip, deflate
+  
+< HTTP/1.1 101 Switching Protocols
+< Soup-Debug-Timestamp: 1648981734
+< Soup-Debug: SoupMessage 1 (0x560e151df0e0)
+< Upgrade: websocket
+< Connection: Upgrade
+< Sec-WebSocket-Accept: 6RgDOSqFYLZWb/Dp+u5h3tGacLE=
+< Date: Sun, 03 Apr 2022 10:28:42 GMT
+< Server: Python/3.9 websockets/10.0
+  
+Connected to signalling server
+Registering id 1704 with server
+Registered with server
+Setting up signalling server call with 5378
+Created data channel
+Starting pipeline
+Sending offer:
+v=0
+o=- 665849003667209409 0 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=ice-options:trickle
+a=group:BUNDLE video0 audio1 application2
+m=video 9 UDP/TLS/RTP/SAVPF 96
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=ice-ufrag:cI/U721ljJud35qmhLPMG9bX5o56ZiYJ
+a=ice-pwd:mX+G83ElpHiE0FmNaE+0SNAkxcrUXap8
+a=rtcp-mux
+a=rtcp-rsize
+a=sendrecv
+a=rtpmap:96 VP8/90000
+a=rtcp-fb:96 nack pli
+a=rtcp-fb:96 transport-cc
+a=framerate:30
+a=extmap:1 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=ssrc:421649605 msid:user550196782@host-ef55dd5e webrtctransceiver0
+a=ssrc:421649605 cname:user550196782@host-ef55dd5e
+a=mid:video0
+a=fingerprint:sha-256 98:89:E0:81:EF:2F:DC:CB:04:61:F8:30:B8:F1:BD:5C:F4:4A:96:EC:47:A0:1E:3F:56:8B:08:5B:2E:64:E1:22
+a=rtcp-mux-only
+m=audio 0 UDP/TLS/RTP/SAVPF 97
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=ice-ufrag:cI/U721ljJud35qmhLPMG9bX5o56ZiYJ
+a=ice-pwd:mX+G83ElpHiE0FmNaE+0SNAkxcrUXap8
+a=bundle-only
+a=rtcp-mux
+a=rtcp-rsize
+a=sendrecv
+a=rtpmap:97 OPUS/48000/2
+a=rtcp-fb:97 transport-cc
+a=extmap:1 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=fmtp:97 sprop-stereo=0;sprop-maxcapturerate=48000
+a=ssrc:1650813120 msid:user550196782@host-ef55dd5e webrtctransceiver1
+a=ssrc:1650813120 cname:user550196782@host-ef55dd5e
+a=mid:audio1
+a=fingerprint:sha-256 98:89:E0:81:EF:2F:DC:CB:04:61:F8:30:B8:F1:BD:5C:F4:4A:96:EC:47:A0:1E:3F:56:8B:08:5B:2E:64:E1:22
+a=rtcp-mux-only
+m=application 0 UDP/DTLS/SCTP webrtc-datachannel
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=ice-ufrag:cI/U721ljJud35qmhLPMG9bX5o56ZiYJ
+a=ice-pwd:mX+G83ElpHiE0FmNaE+0SNAkxcrUXap8
+a=bundle-only
+a=mid:application2
+a=sctp-port:5000
+a=fingerprint:sha-256 98:89:E0:81:EF:2F:DC:CB:04:61:F8:30:B8:F1:BD:5C:F4:4A:96:EC:47:A0:1E:3F:56:8B:08:5B:2E:64:E1:22
+
+ICE gathering state changed to gathering
+ICE gathering state changed to complete
+Received answer:
+v=0
+o=mozilla...THIS_IS_SDPARTA-98.0.2 725616725785161603 0 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=sendrecv
+a=fingerprint:sha-256 BF:3B:7A:21:07:CD:94:7D:09:0D:42:43:ED:04:D1:98:E2:85:91:12:D7:96:D4:E2:32:4D:A1:C8:7B:7C:DF:60
+a=group:BUNDLE video0 audio1 application2
+a=ice-options:trickle
+a=msid-semantic:WMS *
+m=video 9 UDP/TLS/RTP/SAVPF 96
+c=IN IP4 0.0.0.0
+a=sendrecv
+a=extmap:1 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+a=fmtp:96 max-fs=12288;max-fr=60
+a=ice-pwd:29d752c8a04a0ed1f6489a0f7460e7c7
+a=ice-ufrag:2c75b386
+a=mid:video0
+a=msid:{6b77dc70-5525-4ec5-a476-fced7c9859e4} {8b5889af-9048-4417-9c13-bcd5d5f47939}
+a=rtcp-fb:96 nack pli
+a=rtcp-fb:96 transport-cc
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:96 VP8/90000
+a=setup:active
+a=ssrc:1911062276 cname:{c8fdbbd7-d7bb-4148-890e-b02dd11a792e}
+m=audio 9 UDP/TLS/RTP/SAVPF 97
+c=IN IP4 0.0.0.0
+a=sendrecv
+a=fmtp:97 maxplaybackrate=48000;stereo=1;useinbandfec=1
+a=ice-pwd:29d752c8a04a0ed1f6489a0f7460e7c7
+a=ice-ufrag:2c75b386
+a=mid:audio1
+a=msid:{6b77dc70-5525-4ec5-a476-fced7c9859e4} {0d3e97b4-65eb-4a41-acc5-3c600c19b9bd}
+a=rtcp-mux
+a=rtpmap:97 opus/48000/2
+a=setup:active
+a=ssrc:3959176525 cname:{c8fdbbd7-d7bb-4148-890e-b02dd11a792e}
+m=application 9 UDP/DTLS/SCTP webrtc-datachannel
+c=IN IP4 0.0.0.0
+a=sendrecv
+a=ice-pwd:29d752c8a04a0ed1f6489a0f7460e7c7
+a=ice-ufrag:2c75b386
+a=mid:application2
+a=setup:active
+a=sctp-port:5000
+a=max-message-size:1073741823
+
+data channel opened
+data channel opened
+Received data channel message: Hi! (from browser)
+Received data channel message: Hi! (from browser)
+Received data channel message: Hi! (from browser)
+Received data channel message: Hi! (from browser)
+Trying to handle stream with audioconvert ! autoaudiosink
+Trying to handle stream with videoconvert ! autovideosink
