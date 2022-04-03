@@ -17,8 +17,8 @@
 # Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
 # Boston, MA 02110-1301, USA.
 
-LIBDIR = r'/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev/lib/x86_64-linux-gnu'
-DATADIR = r'/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev/share'
-BUILDDIR = r'/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gstreamer/build'
-SRCDIR = r'/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gstreamer'
+LIBDIR = r'/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev/lib/x86_64-linux-gnu'
+DATADIR = r'/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev/share'
+BUILDDIR = r'/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gstreamer/build'
+SRCDIR = r'/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gstreamer'
 GST_VALIDATE_TESTSUITE_VERSION = 'master'

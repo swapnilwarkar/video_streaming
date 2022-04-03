@@ -1,8 +1,0 @@
-prefix=/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev
-includedir=${prefix}/include
-
-Name: cairo-xlib
-Description: Xlib surface backend for cairo graphics library
-Version: 1.17.5
-Requires: cairo, x11, xext
-Cflags: -I${includedir}

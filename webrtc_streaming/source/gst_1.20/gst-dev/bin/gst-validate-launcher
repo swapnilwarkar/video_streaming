@@ -21,9 +21,9 @@ import os
 import subprocess
 import sys
 
-LIBDIR = r'/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev/lib/x86_64-linux-gnu'
-BUILDDIR = r'/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gstreamer/build/subprojects/gst-devtools/validate/tools'
-SRCDIR = r'/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gstreamer/subprojects/gst-devtools/validate/tools'
+LIBDIR = r'/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev/lib/x86_64-linux-gnu'
+BUILDDIR = r'/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gstreamer/build/subprojects/gst-devtools/validate/tools'
+SRCDIR = r'/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gstreamer/subprojects/gst-devtools/validate/tools'
 
 
 def _add_gst_launcher_path():
