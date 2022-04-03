@@ -1,6 +1,8 @@
 # We have used Gstreamer 1.20 Version. 
 
-Here gst-dev include all the require library of Gstreamer 1.20 version. 
+gst-dev direcotry : includes all the require library of Gstreamer 1.20 version. 
+
+webrtc directory : includes source code and executable for live webrtc streaming. 
               
 ---------------------------------------------------------------------------------------------------------------------------------------
 # Export the below environment variables for Gstreamer-1.20 :
