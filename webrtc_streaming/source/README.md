@@ -63,3 +63,17 @@ sudo apt update
   meson install -C build/
   
   cd ../
+  
+  ---------------------------------------------------------------------------------------------------------------------------------------
+# Installing gstreamer examples :
+  
+  cd /home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-examples
+  
+  git clone https://gitlab.freedesktop.org/gstreamer/gst-examples.git
+  
+  cd gst-examples-master/
+  
+  meson --prefix=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev build
+  
+  ninja -C build/
+  
