@@ -1,0 +1,11 @@
+prefix=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avresample
+Description: Libav audio resampling library
+Version: 4.0.0
+Requires.private: libavutil
+Libs: -L${libdir} -lavresample
+Libs.private: -pthread -lm -lva
+Cflags: -I${includedir}

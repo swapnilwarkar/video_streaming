@@ -1,0 +1,11 @@
+prefix=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avcodec
+Description: Multimedia codecs
+Version: 58.134.100
+Requires.private: libavutil, libswresample, opus >=  0.9.4, vorbis >=  1.3.1, vorbisenc >=  1.3.1
+Libs: -L${libdir} -lavcodec
+Libs.private: -pthread -lm -lva -lz -lmp3lame
+Cflags: -I${includedir}

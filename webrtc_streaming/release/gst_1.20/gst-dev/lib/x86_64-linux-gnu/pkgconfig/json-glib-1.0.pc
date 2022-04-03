@@ -1,0 +1,10 @@
+prefix=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: JSON-GLib
+Description: JSON Parser for GLib.
+Version: 1.6.6
+Requires: gio-2.0
+Libs: -L${libdir} -ljson-glib-1.0
+Cflags: -I${includedir}/json-glib-1.0
