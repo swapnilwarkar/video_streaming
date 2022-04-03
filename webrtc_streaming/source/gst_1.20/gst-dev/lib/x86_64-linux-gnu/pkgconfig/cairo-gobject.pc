@@ -1,0 +1,12 @@
+prefix=/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: cairo-gobject
+Description: cairo-gobject for cairo graphics library
+Version: 1.17.5
+Requires: cairo, glib-2.0 >= 2.56.0, gobject-2.0
+Requires.private: pixman-1, zlib, libpng, fontconfig >=  2.11.91, freetype2, x11, xext, xrender >=  0.6, xcb >=  1.6, xcb-render >=  1.6, xcb-shm
+Libs: -L${libdir} -lcairo-gobject
+Libs.private: -lm -ldl
+Cflags: -I${includedir}/cairo

@@ -1,0 +1,11 @@
+prefix=/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: avdevice
+Description: Media device handling
+Version: 58.10.100
+Requires.private: libavutil, libavformat, libavcodec, libswscale, libswresample, libpostproc, libass >=  0.10.2, fontconfig, fribidi, alsa >= 0.9.1, libpulse >= 2.0, xcb >= 1.10, xcb-shm, xcb-shape, xcb-xfixes, sdl2 >=  2.0.1, sdl2 <  2.1.0
+Libs: -L${libdir} -lavdevice
+Libs.private: -pthread -lm -lva -lz -lsndio -lGL -L${libdir} -lavfilter -ldl -lavresample
+Cflags: -I${includedir}

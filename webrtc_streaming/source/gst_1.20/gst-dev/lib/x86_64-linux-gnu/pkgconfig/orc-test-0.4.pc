@@ -1,0 +1,10 @@
+prefix=/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+Name: orc-test
+Description: Test Library of Optimized Inner Loops Runtime Compiler
+Version: 0.4.32
+Libs: -L${libdir} -lorc-test-0.4 -lm -lorc-0.4
+Libs.private: -pthread
+Cflags: -I${includedir}/orc-0.4
