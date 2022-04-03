@@ -9,6 +9,8 @@ js direcotry  : includes a browser JS app.
 
 Open link in your web browser : https://webrtc.nirbheek.in/
 
-./webrtc-sendrecv --peer-id=ID
+Get the peer-id from browser JS application. 
+
+./run_webrtc_livestreaming --peer-id=ID
 
   
