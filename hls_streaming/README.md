@@ -1,3 +1,4 @@
+---------------------------------------------------------------------------------------------------------------------------------------
 # Live HLS Streaming using Gstreamer Open-Source Framework
 
 https://www.collabora.com/news-and-blog/blog/2020/03/19/getting-started-with-gstreamer-gst-build/
@@ -10,7 +11,7 @@ git clone https://gitlab.freedesktop.org/gstreamer/gst-build
 
 cd gst-build
 
-meson --prefix=--prefix=/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev-19 build --buildtype=debug
+meson --prefix=--prefix=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19 build --buildtype=debug
 
 ninja -C build
 
@@ -21,10 +22,10 @@ ninja -C build devenv
 ---------------------------------------------------------------------------------------------------------------------------------------
 #  Export the below environment variables for Gstreamer-1.19 :
 
-export PKG_CONFIG_PATH=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev-19/lib/x86_64-linux-gnu/pkgconfig/
+export PKG_CONFIG_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/lib/x86_64-linux-gnu/pkgconfig/
 
-export GST_PLUGIN_PATH=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev-19/lib/x86_64-linux-gnu/gstreamer-1.0/
+export GST_PLUGIN_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/lib/x86_64-linux-gnu/gstreamer-1.0/
 
-export LD_LIBRARY_PATH=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev-19/lib/x86_64-linux-gnu/
+export LD_LIBRARY_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/lib/x86_64-linux-gnu/
 
-export PATH=/home/swapnil/Desktop/video_streaming/webrtc_streaming/source/gst_1.20/gst-dev-19/bin:$PATH
+export PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/bin:$PATH
