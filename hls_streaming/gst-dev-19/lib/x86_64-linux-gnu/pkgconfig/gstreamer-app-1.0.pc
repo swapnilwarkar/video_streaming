@@ -1,0 +1,20 @@
+prefix=/home/swapnil/Desktop/swapnil/video_streaming/gst_1.20/gst-dev-19
+includedir=${prefix}/include
+libdir=${prefix}/lib/x86_64-linux-gnu
+
+exec_prefix=${prefix}
+toolsdir=${exec_prefix}/bin
+pluginsdir=${libdir}/gstreamer-1.0
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+girdir=${datadir}/gir-1.0
+typelibdir=${libdir}/girepository-1.0
+libexecdir=${prefix}/libexec
+
+Name: gstreamer-app-1.0
+Description: Helper functions and base classes for application integration
+Version: 1.19.2
+Requires: gstreamer-1.0, gstreamer-base-1.0
+Requires.private: glib-2.0 >= 2.56.0, gobject-2.0, gmodule-2.0
+Libs: -L${libdir} -lgstapp-1.0
+Cflags: -I${includedir}/gstreamer-1.0
