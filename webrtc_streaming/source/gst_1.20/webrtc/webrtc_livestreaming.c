@@ -1,10 +1,10 @@
 /*
- * Demo gstreamer app for negotiating and streaming a sendrecv webrtc stream
+ * Demo gstreamer app for negotiating and streaming a send and recv live webrtc stream
  * with a browser JS app.
  *
- * gcc webrtc-sendrecv.c $(pkg-config --cflags --libs gstreamer-webrtc-1.0 gstreamer-sdp-1.0 libsoup-2.4 json-glib-1.0) -o webrtc-sendrecv
+ * gcc webrtc_livestreaming.c $(pkg-config --cflags --libs gstreamer-webrtc-1.0 gstreamer-sdp-1.0 libsoup-2.4 json-glib-1.0) -o run_webrtc_livestreaming
  *
- * Author: Nirbheek Chauhan <nirbheek@centricular.com>
+ * Author: Swapnil Warkar <swapnilwarkar@gmail.com>
  */
 #include <gst/gst.h>
 #include <gst/sdp/sdp.h>
