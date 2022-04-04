@@ -3,10 +3,5 @@ export GST_PLUGIN_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-d
 export LD_LIBRARY_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/lib/x86_64-linux-gnu/
 export PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/bin:$PATH
 
-gcc -Wall hls_stream.c -o run_hls_stream $(pkg-config --cflags --libs gstreamer-1.0)
-./run_hls_stream
-
-
-#python -m SimpleHTTPServer 8080
+python -m SimpleHTTPServer 8080
 #python3 -m http.server 8080
-
