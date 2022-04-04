@@ -1,5 +1,7 @@
-# video_streaming
-live video streaming using different library
+--------------------------------------------------------------------------------------------------------------------------------------
+# Live Video Streaming
+
+Live video streaming using hls and webrtc protocol. 
 
 --------------------------------------------------------------------------------------------------------------------------------------
 # Refer below blogs published by Swapnil Warkar related to webrtc streaming 
