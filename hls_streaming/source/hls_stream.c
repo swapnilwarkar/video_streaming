@@ -26,13 +26,23 @@ main (int argc, char *argv[])
 {
   GstElement *pipeline;
   GstElement *v4l2src;
+  GstElement *hlssink;
   GstMessage *msg;
   GstBus *bus;
   GError *error = NULL;
 
   gst_init (&argc, &argv);
 
-  pipeline = gst_parse_launch ("v4l2src name=my_videosrc ! videoconvert ! clockoverlay ! videoscale ! video/x-raw,width=640, height=360 !  x264enc bitrate=256 ! video/x-h264,profile=\"high\" ! mpegtsmux ! hlssink playlist-root=http://192.168.1.39:8080 location=segment_%05d.ts target-duration=5 max-files=5 ", &error);
+  if (argc != 2) 
+  {
+    g_print ("usage: %s <ip-address>\n", argv[0]);
+    return -1;
+  }
+
+  pipeline = gst_parse_launch ("v4l2src name=my_videosrc ! videoconvert ! clockoverlay ! videoscale ! video/x-raw,width=640, height=360 ! \
+             x264enc bitrate=256 ! video/x-h264,profile=\"high\" ! mpegtsmux ! \
+             hlssink name=my_hlssink location=segment_%05d.ts target-duration=5 max-files=5 ", &error);
+
   if (!pipeline) 
   {
     g_print ("Parse error: %s\n", error->message);
@@ -43,6 +53,11 @@ main (int argc, char *argv[])
   v4l2src = gst_bin_get_by_name (GST_BIN (pipeline), "my_videosrc");
   g_object_set (v4l2src, "device", "/dev/video0", NULL);
   g_object_unref (v4l2src);
+
+  hlssink = gst_bin_get_by_name (GST_BIN (pipeline), "my_hlssink");
+  //g_object_set (hlssink, "playlist-root", "http://192.168.1.39:8080", NULL);
+  g_object_set (hlssink, "playlist-root", argv[1], NULL);
+  g_object_unref (hlssink);
 
 
   gst_element_set_state (pipeline, GST_STATE_PLAYING);

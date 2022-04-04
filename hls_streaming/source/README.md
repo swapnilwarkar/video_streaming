@@ -3,7 +3,7 @@
 
 1. Get ip address of your system using ifconfig. My ip-address is : 192.168.1.39
 
-2. Update the line number 35 of the hls_stream.c file with your ip-address for the hlssink element. hlssink playlist-root=http://192.168.1.39:8080
+2. Update the line number 7 of the "compile_gst_application.sh" shell script with your ip-address. This is argument of executable. "http://192.168.1.39:8080"
 
 3. Update the line number 12 of the index.html file with your ip-address : src="http://192.168.1.39:8080
 
