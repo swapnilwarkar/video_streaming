@@ -1,31 +1,16 @@
 ---------------------------------------------------------------------------------------------------------------------------------------
-# Live HLS Streaming using Gstreamer Open-Source Framework
+# Steps to run Live HLS Stream using Gstreamer Open-Source Framework
 
-https://www.collabora.com/news-and-blog/blog/2020/03/19/getting-started-with-gstreamer-gst-build/
+1. Get ip address of your system using ifconfig. My ip-address is : 192.168.1.39
 
-sudo apt install build-essential python3 git ninja-build python3-pip
+2. Update the line number 35 of the hls_stream.c file with your ip-address for the hlssink element. hlssink playlist-root=http://192.168.1.39:8080
 
-pip3 install --user meson
+3. Update the line number 12 of the index.html file with your ip-address : src="http://192.168.1.39:8080
 
-git clone https://gitlab.freedesktop.org/gstreamer/gst-build
+4. Run the "export_env_var.sh" this will setup the enviourment variables for compiled version of Gstreamer library for version 1.19. 
 
-cd gst-build
+5. Run the web-server for port 8080 using "run_web-server.sh" on another terminal. 
 
-meson --prefix=--prefix=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19 build --buildtype=debug
+6. Get new terminal and run "compile_gst_application.sh" this will generate "run_hls_stream" executable. 
 
-ninja -C build
-
-meson install -C build/
-
-ninja -C build devenv
-
----------------------------------------------------------------------------------------------------------------------------------------
-#  Export the below environment variables for Gstreamer-1.19 :
-
-export PKG_CONFIG_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/lib/x86_64-linux-gnu/pkgconfig/
-
-export GST_PLUGIN_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/lib/x86_64-linux-gnu/gstreamer-1.0/
-
-export LD_LIBRARY_PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/lib/x86_64-linux-gnu/
-
-export PATH=/home/swapnil/Desktop/video_streaming/hls_streaming/gst-dev-19/bin:$PATH
+7. Open web-application on browser : http://192.168.1.39:8080/index.html
