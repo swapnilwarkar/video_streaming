@@ -11,8 +11,12 @@ https://www.gslab.com/blogs/streaming-protocol-battle
 
 https://www.gslab.com/blogs/exemplifying-the-streaming-protocol-webrtc
 
-3. Latency Resolved with a WebRTC Media Stack :
+3.Latency Resolved with a WebRTC Media Stack :
 
 https://www.gslab.com/blogs/latency-resolved-with-webrtc-media-stack
+
+
+
+
 
 
